@@ -1,0 +1,50 @@
+[db]
+  data-source = "$DATABASE_URL"
+  prepare-stmt = true
+  log-level = 1
+  [db.pool]
+    enable = true
+    max-idle-connections = 25
+    max-lifetime = "10m"
+    max-open-connections = 25
+
+[jwt]
+  allowed-users = [""]
+  secret = "0be37f0194e860397fb99fa447bbc47d"
+  session-time = "30d"
+
+[log]
+  development = true
+  level = -1
+
+[server]
+  graceful-shutdown = "15s"
+  port = 8080
+
+[tg]
+  app-hash = "b17c399efa6753c5823d525315bd1997"
+  app-id = 28013143
+  app-version = "4.6.3 K"
+  bg-bots-limit = 5
+  device-model = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0"
+  disable-stream-bots = false
+  lang-code = "en"
+  lang-pack = "webk"
+  rate = 100
+  rate-burst = 5
+  rate-limit = true
+  session-file = ""
+  system-lang-code = "en-US"
+  system-version = "Win32"
+  proxy= "http://127.0.0.1:8080"
+  
+  [tg.uploads]
+    encryption-key = ""
+    retention = "7d"
+    threads = 8
+  [tg.stream]
+    buffer-reader = false
+    buffers = 6
+    use-mmap = false
+    use-pooling= false
+

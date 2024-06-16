@@ -1,0 +1,11 @@
+build:
+  docker:
+    web: Dockerfile
+
+run:
+  web: teldrive run --config /config.toml
+
+addons:
+  - plan: heroku-postgresql
+    options:
+      version: 12
